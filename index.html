@@ -38,16 +38,73 @@
         font-family: 'Libre Baskerville', serif;
     }
 
+    .navbar {
+        background-color: #FFF9F9; /* Background color for the navbar */
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left; /* Make the links appear side by side */
+        display: block; /* Convert links into block-level elements */
+        color: black; /* Text color */
+        text-align: center; /* Center the text */
+        padding: 14px 16px; /* Padding to create spacing */
+        text-decoration: none; /* Remove underlines from links */
+    }
+
+    .navbar a:hover {
+        color: #582323; /* Text color on hover */
+    }
+
+    @media (max-width: 600px) {
+        .navbar a {
+            float: none; /* Make links stack on top of each other on small screens */
+            width: 100%; /* Full width on small screens */
+            text-align: left; /* Align text to the left on small screens */
+        }
+    }
+
   </style>    
 
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
-    <div class="flex flex-col justify-center white-bg items-center gap-y-10 py-20">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-y-5 md:gap-x-10">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Shield_of_the_University_of_Birmingham.svg/1200px-Shield_of_the_University_of_Birmingham.svg.png" width="150px" height="150px">
-            <p class="text-5xl text-custom-color baskerville">University of Birmingham Law Review</p>
+    <div class="navbar flex flex-row justify-around items-center py-5">
+        <a href="#">
+            <button>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-y-3 md:gap-x-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Shield_of_the_University_of_Birmingham.svg/1200px-Shield_of_the_University_of_Birmingham.svg.png" width="50px" height="50px">
+                    <p class="text-xl text-custom-color baskerville">Law Review</p>
+                </div>
+            </button>
+        </a>
+        <div class="flex flex-row justify-center items-center gap-x-5">
+            <a href="#guidelines">
+                <button>Guidelines</button>
+            </a>
+            <a href="#submit-article">
+                <button>Submit</button>
+            </a>
+            <a href="#contact">
+                <button>Contact</button>
+            </a>
         </div>
+    </div>
+    
+    <div class="flex flex-col justify-center white-bg items-center gap-y-10">
+
+        <div class="flex flex-col md:flex-row justify-center items-center md:gap-x-10 gap-y-5 pt-20">
+            <svg class="w-10 h-10 mx-auto mb-3 text-custom-color" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+
+            <p class="text-5xl baskerville">The University of Birmingham Law Review</p>
+
+            <svg class="w-10 h-10 mx-auto mb-3 text-custom-color" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+        </div>
+
         <div class="flex flex-col md:flex-row gap-y-5 md:gap-x-10 justify-center items-center px-40 pt-10 pb-20">
             <div class="w-1/2 ">
                 <p class="baskerville text-lg">
@@ -61,26 +118,65 @@
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center gap-y-10 custom-bg w-full py-20 px-40">
-            <p class="text-5xl text-white baskerville">Submission Guidelines</p>
-            <p class="text-white text-lg baskerville">
-                The University of Birmingham Student Law Review accepts articles and Case comments. Book reviews are not accepted. A short-form article eligible for publication in our monthly edition should be under 1,000 words. A long-form submission for a semestrial paper should be between 2,000 to 4,000 words. Case comments on newer cases are our preference, but should the comments demonstrate a new approach to an older case of importance,  this is also acceptable. 
-            </p>
-            <button>
-                <a href="#">
-                    <div class="bg-white px-5 py-2 rounded">
-                        <p class="text-custom-color text-lg">Submit Now</p>
-                    </div>
-                </a>
-            </button>
-        </div>
+        <section id="guidelines">
+            <div class="flex flex-col justify-center items-center gap-y-10 custom-bg w-full py-40 px-40">
+                <p class="text-5xl text-white baskerville">Submission Guidelines</p>
+                <p class="text-white text-lg baskerville">
+                    The University of Birmingham Student Law Review accepts articles and Case comments. Book reviews are not accepted. A short-form article eligible for publication in our monthly edition should be under 1,000 words. A long-form submission for a semestrial paper should be between 2,000 to 4,000 words. Case comments on newer cases are our preference, but should the comments demonstrate a new approach to an older case of importance,  this is also acceptable.
+                </p>
+                <button>
+                    <a href="assets/guidelines.pdf" target="_blank">
+                        <div class="bg-white px-5 py-2 rounded">
+                            <p class="text-custom-color text-lg">Guidelines</p>
+                        </div>
+                    </a>
+                </button>
+            </div>
+        </section>
 
-        <div class="flex flex-col justify-center items-center gap-y-10 w-full py-20 px-40">
-            <p class="text-5xl baskerville">Submit Your Article</p>
-            
+        <section id="submit-article">
+            <div class="flex flex-col justify-center items-center gap-y-10 w-full py-20 px-40">
+                <p class="text-5xl baskerville">Submit Your Article</p>
+                <p class="text-lg baskerville">
+                    In order to submit your article, please check our submission guidelines and email us at:
+                </p>
+                <p class="text-2xl baskerville">kxl088@student.bham.ac.uk</p>
+                <p class="text-lg baskerville">
+                    With the following information:
+                </p>
+                <ul class="list-disc pl-4">
+                    <li class="baskerville">First & Last name</li>
+                    <li class="baskerville">Email</li>
+                    <li class="baskerville">University</li>
+                    <li class="baskerville">Education Level & Degree</li>
+                    <li class="baskerville">Your article in .docx format</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="flex flex-col justify-center items-center gap-y-10 custom-bg w-full py-40 px-40" id="contact">
+            <p class="text-5xl text-white baskerville">Contact us</p>
+            <p class="text-white text-lg baskerville">
+                Feel free to reach out to us for any enquiries:
+            </p>
+            <ul class="list-disc pl-4">
+                <li class="baskerville text-white">Kosta LOVATO: kxl088@student.bham.ac.uk</li>
+                <li class="baskerville text-white">Noah BELLING: nxb080@student.bham.ac.uk</li>
+            </ul>
         </div>
 
     </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
